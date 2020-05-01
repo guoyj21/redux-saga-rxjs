@@ -2,7 +2,9 @@
   "name": "redux-saga-rxjs-example-auth",
   "version": "0.1.0",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3000 --hot --content-base ./dev"
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3000 --hot --content-base ./dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -23,8 +25,10 @@
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
     "redux-saga-rxjs": "^0.2.0",
-    "rxjs": "^5.0.0-beta.2"
+    "rxjs": "^5.0.0-beta.2",
+    "snyk": "^1.316.1"
   },
   "author": "Tomas Weiss <tomas.weiss2@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
